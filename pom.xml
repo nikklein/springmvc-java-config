@@ -7,8 +7,8 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<springframework.version>4.3.3.RELEASE</springframework.version>
-		<jcloverslf4j.version>1.7.5</jcloverslf4j.version>
+		<springframework.version>4.2.4.RELEASE</springframework.version>
+		<slf4j.version>1.7.5</slf4j.version>
 		<logback.version>1.0.13 </logback.version>
 		<jsp.version>2.2</jsp.version>
 		<jstl.version>1.2</jstl.version>
@@ -16,22 +16,15 @@
 	</properties>
 
 	<dependencies>
-	
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${jcloverslf4j.version}</version>
+			<version>${slf4j.version}</version>
 		</dependency>
 
 		<dependency>
@@ -76,7 +69,7 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<compilerArgument>-\Xlint:all</compilerArgument>
+					<compilerArgument>-Xlint:all</compilerArgument>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true </showDeprecation>
 				</configuration>
