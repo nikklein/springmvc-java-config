@@ -28,7 +28,11 @@
 			</div>
 	</nav>
 	<div class="container">
-	    <a href="${pageContext.request.contextPath}/displayUsers">Displays users with Embedded Database</a>
+		<a href="${pageContext.request.contextPath}/displayUsers">Displays
+			users with Embedded Database</a> <br /> <a
+			href="${pageContext.request.contextPath}/displayUsersMySQL">Displays
+			users with MySQL Database</a>
+
 		<p>Content</p>
 	</div>
 	<div class="panel panel-default">

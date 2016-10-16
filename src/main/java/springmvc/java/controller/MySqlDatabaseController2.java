@@ -8,23 +8,21 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class EmbeddedDatabaseController {
+public class MySqlDatabaseController2 {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(EmbeddedDatabaseController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MySqlDatabaseController2.class);
 
     @Autowired
-    @Qualifier("embedded")
     DataSource dataSource;
 
     private JdbcTemplate jdbcTemplate;
 
-    @RequestMapping(value = "/displayUsers")
+    @RequestMapping(value = "/displayUsersMySQL")
     public void displayUsers() {
 
         jdbcTemplate = new JdbcTemplate(dataSource);
@@ -33,7 +31,7 @@ public class EmbeddedDatabaseController {
 
         for (Map<String, Object> user : users) {
 
-            LOGGER.debug("username: " + user.get("username"));
+            LOGGER.debug("MySQL username: " + user.get("username"));
         }
 
     }
