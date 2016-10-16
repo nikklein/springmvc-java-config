@@ -26,6 +26,7 @@
 				</button>
 				<a class="navbar-brand" href="#">Click</a>
 			</div>
+		</div>
 	</nav>
 	<div class="container">
 		<a href="${pageContext.request.contextPath}/displayUsers">Displays

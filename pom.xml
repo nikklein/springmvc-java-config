@@ -8,6 +8,8 @@
 
 	<properties>
 		<springframework.version>4.2.4.RELEASE</springframework.version>
+		<spring.jpa.data.version>1.9.2.RELEASE</spring.jpa.data.version>
+		<hibernate.version>4.2.1.Final</hibernate.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<logback.version>1.0.13 </logback.version>
 		<jsp.version>2.2</jsp.version>
@@ -21,17 +23,31 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-			<dependency>
-		    <groupId>org.springframework</groupId>
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.jpa.data.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -54,16 +70,16 @@
 			<version>${jsp.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.hsqldb</groupId>
+			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<version>2.3.4</version>
 		</dependency>
 		<dependency>
-		    <groupId>mysql</groupId>
+			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.10</version>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
