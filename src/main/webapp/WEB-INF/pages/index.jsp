@@ -28,6 +28,7 @@
 			</div>
 	</nav>
 	<div class="container">
+	    <a href="${pageContext.request.contextPath}/displayUsers">Displays users with Embedded Database</a>
 		<p>Content</p>
 	</div>
 	<div class="panel panel-default">
